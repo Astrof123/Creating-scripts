@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    height: 70px;
+    margin-bottom: 8px;
+    background-color: #333333;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+}
+
+header a {
+    font-size: 21px;
+    margin-right: 16px;
+    color: #ffffff;
+}
+
+h1 {
+    margin-bottom: 24px;
+    font-size: 28px;
+}
+
+main {
+    width: 500px;
+    background-color: white;
+    padding-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainTitle {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 350px;
+    height: 40px;
+    border: 2px solid #808080;
+    border-radius: 10px;
+    font-size: 22px;
+    margin-bottom: 14px;
+    margin-top: 5px;
+}
+
+.titleInputText {
+    font-size: 20px;
+}
+
+select {
+    width: 350px;
+    height: 40px;
+    border: 2px solid #808080;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.chooseSubject {
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-top: 15px;
+}
+
+textarea {
+    width: 350px;
+    height: 70px;
+    border: 2px solid #808080;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    resize: none;
+}
+
+.messageBlock {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 22px;
+    background-color: #333333;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    box-shadow: 0px 10px 10px 3px rgba(34, 60, 80, 0.2) inset;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.error {
+    margin-bottom: 16px;
+}
+
+
+input[type="checkbox"] {
+    width: 28px;
+    height: 28px;
+}
+
+.wrapper_privacy {
+    width: 100%;
+}
+
+.privacy_label {
+    display: flex;
+    gap: 16px;
+}
+
+footer  {
+    color: white;
+    position: sticky;
+    width: 100%;
+    background-color: #333333;
+    padding: 10px 20px;
+
+}
+.content {
+    /* border: 1px solid blue; */
+    /* border-radius: 20px; */
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+footer {
+    margin-top: 20px;
+}
+.rights {
+    display: flex;
+    justify-content: center;
+    gap: 24px
+}
+
+.news_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.news_image {
+    width: 250px;
+    height: 150px;
+}
+
+.news_block {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    overflow: hidden;
+    border: 3px solid #333333;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.news_block p {
+    font-size: 17px;
+}
+
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.title {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+table {
+	width: 80%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse; 
+}
+table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #333333;
+	border: 1px solid #ffffff;
+    color: #ffffff;
+}
+table td {
+	border: 1px solid #333333;
+	padding: 5px;
+}
+
+.thanks {
+    margin-right: 16px;
+}
