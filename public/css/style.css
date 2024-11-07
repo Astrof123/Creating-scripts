@@ -229,3 +229,15 @@ table td {
 .thanks {
     margin-right: 16px;
 }
+
+.root_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

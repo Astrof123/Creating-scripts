@@ -3,6 +3,13 @@
 @section('title', 'Form Super Form')
 
 @section('content')
+<div class='root_form'>
+    @if(session('status'))
+        <div class="message">
+            {{session('status')}}
+        </div>
+    @endif
+
 
     <form method="POST" action="/form">
         @csrf()
@@ -14,7 +21,7 @@
             <input type="text" name="name" id="" value="{{ old('name') }}">
         </label>
         @error('name')
-            <div class="error" style="color: red;">{{ $message }}</div>
+            <div class="error" style="color: red;">{{ "Введите имя" }}</div>
         @enderror
 
 
@@ -23,7 +30,7 @@
             <input type="text" name="email" id="" value="{{ old('email') }}">
         </label>
         @error('email')
-            <div class="error" style="color: red;">{{ $message }}</div>
+            <div class="error" style="color: red;">{{ "Введите почту" }}</div>
         @enderror
 
 
@@ -32,7 +39,7 @@
             <input type="text" name="phone" id="" value="{{ old('phone') }}">
         </label>
         @error('phone')
-            <div class="error" style="color: red;">{{ $message }}</div>
+            <div class="error" style="color: red;">{{ "Введите телефон" }}</div>
         @enderror
 
 
@@ -41,7 +48,7 @@
             <input type="text" name="passport" id="" value="{{ old('passport') }}">
         </label>
         @error('passport')
-            <div class="error" style="color: red;">{{ $message }}</div>
+            <div class="error" style="color: red;">{{ "Введите паспортные данные" }}</div>
         @enderror
 
         <label class="titleInputText">
@@ -53,7 +60,7 @@
             </select>
         </label>
         @error('president')
-            <div class="error" style="color: red;">{{ $message }}</div>
+            <div class="error" style="color: red;">{{ "Выберите президента" }}</div>
         @enderror
 
         <div class="wrapper_privacy">
@@ -62,11 +69,13 @@
                 <input type="checkbox" name="privacy" id="" {{old('privacy') ? 'checked' : ""}}>
             </label>
             @error('privacy')
-                <div class="error" style="color: red;">{{ $message }}</div>
+                <div class="error" style="color: red;">{{ "Поставьте подпись" }}</div>
             @enderror
         </div>
 
 
         <button type="submit">Send</button>
     </form>
+</div>
+    
 @endsection

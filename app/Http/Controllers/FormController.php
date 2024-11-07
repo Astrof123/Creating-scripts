@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class FormController extends Controller
-{
+class FormController extends Controller {
+
     public function __construct() {
 
     }
@@ -24,13 +24,12 @@ class FormController extends Controller
             'privacy' => 'accepted'
         ]);
 
-        $dataDir = 'data/';
+        $dataDir = storage_path('ourform');
         if (!file_exists($dataDir)) {
             mkdir($dataDir, 0777, true);
         }
 
         $name = $request->only([
-            '_token',
             'name',
             'email',
             'phone',
@@ -39,7 +38,7 @@ class FormController extends Controller
             'privacy'
         ]);
 
-        $filename = $dataDir . date('Ymd-His') . '-' . uniqid() . '.txt';
+        $filename = $dataDir . '\\' . date('Ymd-His') . '-' . uniqid() . '.txt';
 
         $contents = [
             'ФИО' => $name['name'],
@@ -54,12 +53,12 @@ class FormController extends Controller
 
         file_put_contents($filename, $json);
 
-        return view("thanks");
+        return back()->with('status', 'Данные успешно сохранены!');
     } 
 
     public function table() {
         $allFiles = [];
-        $directory = 'data';
+        $directory = storage_path('ourform');
 
         foreach (glob("$directory/*.txt") as $filename) {
             $jsonData = file_get_contents($filename);
